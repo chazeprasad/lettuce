@@ -1,0 +1,22 @@
+{
+    "name": "@lettuce/action",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@lettuce/core": "^1.0.10",
+        "@lettuce/hook": "^1.0.10",
+        "@lettuce/inject": "^1.0.10",
+        "@types/reflect-metadata": "^0.1.0",
+        "reflect-metadata": "^0.1.13"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

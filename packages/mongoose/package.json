@@ -1,0 +1,19 @@
+{
+    "name": "@lettuce/mongoose",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "mongodb": "^3.6.9",
+        "mongoose": "^5.12.13"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
