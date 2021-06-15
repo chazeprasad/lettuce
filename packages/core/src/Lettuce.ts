@@ -1,8 +1,10 @@
 import * as express from 'express';
 import * as http from 'http';
-import { Base } from './Base';
+import { Base } from '@lettuce/common';
 import { AppUtil } from './AppUtil';
 import { ServerUtil } from './ServerUtil';
+import { ControllerUtil } from '@lettuce/action';
+import { ErrorUtil } from '@lettuce/error';
 
 export interface AppConfig {
     appRoot: string | any;
@@ -10,7 +12,7 @@ export interface AppConfig {
     cors?: any;
 }
 
-export class Prism extends Base {
+export class Lettuce extends Base {
     public appConfig: AppConfig;
 
     public app: express.Application;
@@ -19,21 +21,20 @@ export class Prism extends Base {
 
     constructor(config: AppConfig) {
         super();
+        this.appConfig = config;
 
-        this.preInitialize(config);
+        this.preInitialize();
     }
 
-    preInitialize(config: AppConfig) {
-        this.appConfig = config;
+    preInitialize() {
         this.app = express();
         AppUtil.configureApp(this.app);
     }
 
-    // initialize() {
-    //     AppUtil.configureApp(this.app);
-    //     configureController(`${this.appConfig.config.appRoot.path}/src/app/controller`, this.app);
-    //     configureExceptionHandler(`${this.appConfig.config.appRoot.path}/src/app/error`, this.app);
-    // }
+    initialize() {
+        ControllerUtil.configureController(this.appConfig.appRoot + '/controller', this.app);
+        ErrorUtil.configureExceptionHandler(this.appConfig.appRoot + '/error', this.app);
+    }
 
     setup() {
         this.server = http.createServer(this.app);
@@ -41,7 +42,7 @@ export class Prism extends Base {
     }
 
     startup() {
-        // this.initialize();
+        this.initialize();
         this.setup();
         ServerUtil.startServer(this.server);
     }

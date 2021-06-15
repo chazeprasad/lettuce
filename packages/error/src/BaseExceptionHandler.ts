@@ -1,4 +1,4 @@
-import { Base } from '@lettuce/core';
+import { Base } from '@lettuce/common';
 import { ApiError } from './ApiError';
 import { IRescueProp } from './IRescueProp';
 import { IRescueResultProp } from './IRescueResultProp';

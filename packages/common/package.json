@@ -1,5 +1,5 @@
 {
-    "name": "@lettuce/action",
+    "name": "@lettuce/common",
     "version": "1.0.1",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -10,11 +10,9 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@lettuce/common": "^1.0.1",
-        "@lettuce/hook": "^1.0.1",
+        "@lettuce/logger": "^1.0.1",
         "@lettuce/inject": "^1.0.1",
-        "@types/reflect-metadata": "^0.1.0",
-        "reflect-metadata": "^0.1.13"
+        "jsonwebtoken": "^8.5.1"
     },
     "publishConfig": {
         "access": "public"

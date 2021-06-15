@@ -10,7 +10,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@lettuce/core": "^1.0.1",
+        "@lettuce/common": "^1.0.1",
         "@lettuce/hook": "^1.0.1",
         "@lettuce/inject": "^1.0.1",
         "@types/reflect-metadata": "^0.1.0",

@@ -1,4 +1,4 @@
-import { Base } from '@lettuce/core';
+import { Base } from '@lettuce/common';
 import { IBeforeActionProps, IAfterActionProps } from '@lettuce/hook';
 
 export type Middleware = (req?, res?, next?: any) => any;

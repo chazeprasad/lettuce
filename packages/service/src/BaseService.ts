@@ -1,4 +1,4 @@
-import { Base } from '@lettuce/core';
+import { Base } from '@lettuce/common';
 
 export class BaseService extends Base {
     constructor() {
