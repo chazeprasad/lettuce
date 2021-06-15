@@ -1,6 +1,6 @@
 {
     "name": "@lettuce/core",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
@@ -10,9 +10,9 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@lettuce/action": "^1.0.2",
-        "@lettuce/common": "^1.0.2",
-        "@lettuce/error": "^1.0.2",
+        "@lettuce/action": "^1.0.3",
+        "@lettuce/common": "^1.0.3",
+        "@lettuce/error": "^1.0.3",
         "@lettuce/inject": "^1.0.1",
         "@lettuce/logger": "^1.0.1",
         "@types/app-root-path": "^1.2.4",
