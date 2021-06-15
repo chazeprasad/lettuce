@@ -1,6 +1,6 @@
 {
     "name": "@lettuce/error",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
@@ -10,8 +10,8 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@lettuce/common": "^1.0.3",
-        "@lettuce/status": "^1.0.1",
+        "@lettuce/common": "^1.0.4",
+        "@lettuce/status": "^1.0.4",
         "jsonwebtoken": "^8.5.1"
     },
     "publishConfig": {
