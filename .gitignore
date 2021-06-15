@@ -1,5 +1,6 @@
 # dependencies
 node_modules/
+**/node_modules/
 
 # IDE
 /.idea
@@ -8,8 +9,8 @@ node_modules/
 *.code-workspace
 
 # bundle
-packages/**/*.d.ts
-packages/**/*.js
+# packages/**/*.d.ts
+# packages/**/*.js
 
 # misc
 .DS_Store
