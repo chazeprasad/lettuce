@@ -1,6 +1,6 @@
 {
     "name": "@lettuce/common",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
@@ -10,8 +10,8 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@lettuce/logger": "^1.0.1",
         "@lettuce/inject": "^1.0.1",
+        "@lettuce/logger": "^1.0.1",
         "jsonwebtoken": "^8.5.1"
     },
     "publishConfig": {

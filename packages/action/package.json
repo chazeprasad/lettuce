@@ -1,6 +1,6 @@
 {
     "name": "@lettuce/action",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
     "files": [
@@ -10,7 +10,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@lettuce/common": "^1.0.1",
+        "@lettuce/common": "^1.0.2",
         "@lettuce/hook": "^1.0.1",
         "@lettuce/inject": "^1.0.1",
         "@types/reflect-metadata": "^0.1.0",
