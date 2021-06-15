@@ -17,14 +17,16 @@
         "clean": "rimraf packages/**/dist",
         "clean:lerna": "lerna clean",
         "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status",
-        "lint": "concurrently 'npm run lint:packages' 'npm run lint:integration' 'npm run lint:spec'",
-        "lint:fix": "concurrently 'npm run lint:packages -- --fix' 'npm run lint:integration -- --fix' 'npm run lint:spec -- --fix'",
-        "lint:integration": "eslint 'integration/*/{,!(node_modules)/**/}/*.ts' -c '.eslintrc.spec.js'",
+        "lint": "yarn lint:packages",
+        "lint:fix": "yarn lint:packages -- --fix",
         "lint:packages": "eslint 'packages/**/**.ts' --ignore-pattern 'packages/**/*.spec.ts'",
-        "lint:spec": "eslint 'packages/**/**.spec.ts' -c '.eslintrc.spec.js'"
+        "protect-master": "env script/protect-master",
+        "pre-commit-eslint": "yarn eslint --since master",
+        "pre-commit": "yarn lint-staged && yarn pre-commit-eslint"
     },
     "workspaces": {
         "packages": [
+            "script/*",
             "packages/*"
         ]
     },
@@ -42,10 +44,14 @@
         "prettier": "^2.2.1"
     },
     "dependencies": {
+        "@commitlint/cli": "^12.1.4",
+        "@commitlint/config-conventional": "^12.1.4",
+        "@commitlint/config-lerna-scopes": "^12.1.4",
         "@types/node": "^15.12.2",
         "@typescript-eslint/eslint-plugin": "^4.26.1",
         "concurrently": "^6.2.0",
         "lerna": "^3.22.1",
+        "lint-staged": "^11.0.0",
         "npm-run-all": "^4.1.5",
         "typescript": "^4.1.5"
     },
@@ -63,5 +69,4 @@
     "publishConfig": {
         "access": "public"
     }
-    
 }
