@@ -1,3 +1,1 @@
-export {
-    Base,
-} from './Base';
+export { Base } from './Base';
